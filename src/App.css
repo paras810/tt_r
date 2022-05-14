@@ -1,12 +1,13 @@
 .div{
-    background-color: bisque;
-    width: 100vw;
-    height: 100vh;
+    background-color: rgb(240, 203, 159);
+    width: 90vw;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+   
     
 
 }
