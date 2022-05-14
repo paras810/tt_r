@@ -9,7 +9,8 @@ const App = () => {
       fname: '',
       lname: '',
       email: '',
-      number: ''
+      number: '',
+      hobby: ''
     }
   )
 
@@ -22,44 +23,12 @@ const App = () => {
     const {value,name} = e.target
 
     setFullName((preValue) => {
-      // console.log(preValue);
-      // if (name === 'fname') {
-      //   return {
-      //     fname: value,
-      //     lname: preValue.lname,
-      //     number: preValue.number,
-      //     email: preValue.email
-      //   }
-      // }
-
-      // else if (name === 'lname') {
-      //   return {
-      //     fname: preValue.fname,
-      //     lname: value,
-      //     number: preValue.number,
-      //     email: preValue.email
-      //   }
-      // }
-
-      // else if (name === 'email') {
-      //   return {
-      //     fname: preValue.fname,
-      //     lname: preValue.lname,
-      //     email: value,
-      //     number: preValue.number
-      //   }
-      // }
-
-      // else if (name === 'number') {
-      //   return {
-      //     fname: preValue.fname,
-      //     lname: preValue.lname,
-      //     email: preValue.email,
-      //     number: value
-      //   }
-      // }
+     return{
+       ...preValue,
+       [name]: value,
+     }
       
-      
+
     })
   }
 
@@ -70,7 +39,8 @@ const App = () => {
     fname: '',
     lname: '',
     email: '',
-    number: ''
+    number: '',
+    hobby: ''
   })
   }
 
@@ -78,16 +48,32 @@ const App = () => {
   return (
     <form className='div' onSubmit={onSumbit} >
 
-      <h1> {`${fullName.fname} ${fullName.lname}`} </h1>
+      <p> {`${fullName.fname} ${fullName.lname}`} </p>
       <p style={{ color: 'blue' }}>{fullName.email}</p>
       <br />
-      <div style={{ color: 'yellowgreen' }}> {fullName.number}</div>
-      <input type="text" placeholder='enter your first name' onChange={inputEvent} value={fullName.fname} name="fname" autoComplete="off" />
+      <p style={{ color: 'yellowgreen' }}> {fullName.number}</p>
+      <p>{fullName.hobby}</p>
+      <input type="text" placeholder='enter your first name' onChange={inputEvent} value={fullName.fname} name="fname" autoComplete="off" required/>
 
-      <input type="text" placeholder='enter your last name' onChange={inputEvent} value={fullName.lname} name="lname" autoComplete="off" />
+      <input type="text" placeholder='enter your last name' onChange={inputEvent} value={fullName.lname} name="lname" autoComplete="off"required />
 
-      <input type="email" placeholder='enter  your email' name='email' onChange={inputEvent} value={fullName.email} autoComplete="off" />
-      <input type="number" name="number" placeholder='enter your ph no.' onChange={inputEvent} value={fullName.number} autoComplete="off" />
+      <input type="email" placeholder='enter  your email' name='email' onChange={inputEvent} value={fullName.email} autoComplete="off" required/>
+
+      <input type="number" 
+      name="number"
+       placeholder='enter your ph no.'
+        onChange={inputEvent}
+         value={fullName.number} 
+         autoComplete="off" required/>
+
+      <input type="text" 
+      name="hobby"
+       placeholder='enter your hobby'
+        onChange={inputEvent}
+         value={fullName.hobby}
+         autoComplete="off" required />
+
+
       <button type='submit'>Sumbit</button>
 
 

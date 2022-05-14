@@ -1,44 +1,43 @@
-.div{
+body {
     background-color: rgb(240, 203, 159);
-    width: 100vw;
-    height: 100vh;
+}
+
+.div {
+
+
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    gap: .8rem;
-   font-size: 18px;
-    
+    gap: 1rem;
 
-}
-h1{
-    margin: -1rem;
-    font-size: 22px;
-    text-transform: capitalize;
+
+
 }
 p{
-    font-size: 20px;
-}
-div{
-    margin: -2.7rem 0 4px 0;
-    font-size: 18px;
-    color: rgb(238, 97, 42);
    
+    margin: 3px 0 0 0;
+    font-size: 21px;
+    font-weight: 900;
+    color: rgba(245, 41, 146, 0.94);
 }
 
-input{
+input {
     padding: .5rem 2.5rem;
     border: none;
     outline: none;
     font-size: 20px;
+    width: 80%;
+    margin: auto;
 }
 
 
-input[type = number]::-webkit-inner-spin-button,
-input[type= number]::-webkit-outer-spin-button{
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
-button{
+
+button {
     padding: 12px 20px;
     color: rgb(12, 12, 12);
     /* background-color: rgb(238, 148, 238); */
