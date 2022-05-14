@@ -23,41 +23,43 @@ const App = () => {
 
     setFullName((preValue) => {
       // console.log(preValue);
-      if (name === 'fname') {
-        return {
-          fname: value,
-          lname: preValue.lname,
-          number: preValue.number,
-          email: preValue.email
-        }
-      }
+      // if (name === 'fname') {
+      //   return {
+      //     fname: value,
+      //     lname: preValue.lname,
+      //     number: preValue.number,
+      //     email: preValue.email
+      //   }
+      // }
 
-      else if (name === 'lname') {
-        return {
-          fname: preValue.fname,
-          lname: value,
-          number: preValue.number,
-          email: preValue.email
-        }
-      }
+      // else if (name === 'lname') {
+      //   return {
+      //     fname: preValue.fname,
+      //     lname: value,
+      //     number: preValue.number,
+      //     email: preValue.email
+      //   }
+      // }
 
-      else if (name === 'email') {
-        return {
-          fname: preValue.fname,
-          lname: preValue.lname,
-          email: value,
-          number: preValue.number
-        }
-      }
+      // else if (name === 'email') {
+      //   return {
+      //     fname: preValue.fname,
+      //     lname: preValue.lname,
+      //     email: value,
+      //     number: preValue.number
+      //   }
+      // }
 
-      else if (name === 'number') {
-        return {
-          fname: preValue.fname,
-          lname: preValue.lname,
-          email: preValue.email,
-          number: value
-        }
-      }
+      // else if (name === 'number') {
+      //   return {
+      //     fname: preValue.fname,
+      //     lname: preValue.lname,
+      //     email: preValue.email,
+      //     number: value
+      //   }
+      // }
+      
+      
     })
   }
 
