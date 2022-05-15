@@ -10,6 +10,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Service from './components/Service';
+import User from './components/User';
 
 const App = () => {
 
@@ -24,8 +26,10 @@ const App = () => {
 
  
       <Route exact path='/' element={<Navbar/>} />
-      <Route exact path='/about' element={<About/>} />
+      <Route exact path='/about' element={ <About /> } />
       <Route exact path='/contact' element={<Contact/>} />
+      <Route exact path='/user/:name' element={<User/>} />
+      <Route exact path='/service' element={<Service/>} />
 
       {/* both are working properly */}
       {/* <Route path='/*' element={<Error/>} /> */}
