@@ -2,14 +2,14 @@ import React from 'react'
 import { Link , useParams} from 'react-router-dom'
 
 const User = () => {
-    let { name } = useParams();
+    const {fname , lname} = useParams() 
 
   return (
       <>
-    <div>  user  {name}</div>
+    <div> user page { fname } { lname }</div>
     <button><Link to="/">Home Page</Link></button>
     </>
   )
 }
 
-export default User
+export default User 

@@ -8,7 +8,7 @@ const Navbar = () => {
       <li><NavLink  to="/">Home</NavLink></li>
       <li><NavLink  to="/about">About</NavLink></li>
       <li><NavLink  to="/contact">Contact Us</NavLink></li>
-      <li><NavLink  to="/user">User</NavLink></li>
+      <li><NavLink  to="/user/ParamsHookInReactRouter/Dom">User</NavLink></li>
       <li><NavLink  to="/service">Service</NavLink></li>
     </ul>
     </>
