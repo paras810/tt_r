@@ -1,3 +1,6 @@
+body{
+    background-color: bisque;
+}
 .navbar{
     display: flex;
     justify-content: space-evenly;
@@ -17,4 +20,31 @@
 }
 .navbar a:hover{
     color: rgb(209, 231, 250);
+}
+.searchbar{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+}
+.searchbar input{
+    margin: 30px 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img_container{
+    display: flex;
+    justify-content: center;
+
+}
+.img_container img{
+    cursor: pointer;
+}
+
+.img_container img:hover{
+
+    box-shadow: 0 .2rem .5rem .1rem rgba(0, 0, 0, 0.3);
 }

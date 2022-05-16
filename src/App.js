@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Service from './components/Service';
 import User from './components/User';
+import Search from './components/Search';
 
 const App = () => {
 
@@ -30,10 +31,12 @@ const App = () => {
       <Route exact path='/contact' element={<Contact/>} />
       <Route exact path='/user/:fname/:lname' element={<User/>} />
       <Route exact path='/service' element={<Service/>} />
+      <Route exact path='/search' element={<Search/>}/>
 
       {/* both are working properly */}
       {/* <Route path='/*' element={<Error/>} /> */}
       <Route path='*' element={<Error/>} />
+
 
      </Routes>
      </BrowserRouter>
