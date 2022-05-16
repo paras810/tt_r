@@ -1,50 +1,42 @@
-body{
-    background-color: bisque;
-}
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: black;
-    color: wheat;
-    padding: 15px 10px;
-    margin: 5px 10px;
-}
-.navbar li{
-    list-style: none;
-}
-.navbar a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.navbar a:hover{
-    color: rgb(209, 231, 250);
-}
-.searchbar{
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    gap: 1rem;
-}
-.searchbar input{
-    margin: 30px 1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.img_container{
-    display: flex;
-    justify-content: center;
-
-}
-.img_container img{
-    cursor: pointer;
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.img_container img:hover{
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
-    box-shadow: 0 .2rem .5rem .1rem rgba(0, 0, 0, 0.3);
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

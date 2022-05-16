@@ -1,46 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import './App.css';
+import React from 'react'
+import NoteState from './context/notes/NoteState';
 import Navbar from './components/Navbar';
-import '../src/App.css'
-import About from './components/About'
-import Contact from './components/Contact';
-import Error from './components/Error';
+import About from './components/About';
+import Home from './components/Home';
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Service from './components/Service';
-import User from './components/User';
-import Search from './components/Search';
+
+
 
 const App = () => {
-
-
-
   return (
     <>
 
-     <BrowserRouter>
-     {/* <Navbar/> */}
-     <Routes>
+      <NoteState>
+          <Navbar />
+            
+         <Home/>
+         <About/>
+      </NoteState>
 
- 
-      <Route exact path='/' element={<Navbar/>} />
-      <Route exact path='/about' element={ <About /> } />
-      <Route exact path='/contact' element={<Contact/>} />
-      <Route exact path='/user/:fname/:lname' element={<User/>} />
-      <Route exact path='/service' element={<Service/>} />
-      <Route exact path='/search' element={<Search/>}/>
-
-      {/* both are working properly */}
-      {/* <Route path='/*' element={<Error/>} /> */}
-      <Route path='*' element={<Error/>} />
-
-
-     </Routes>
-     </BrowserRouter>
     </>
+
   )
 }
 
