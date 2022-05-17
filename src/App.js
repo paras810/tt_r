@@ -1,23 +1,24 @@
 import './App.css';
 import React from 'react'
-import NoteState from './context/notes/NoteState';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Home from './components/Home';
-
+import Navbar from './Navbar';
+import Shop from './Shop';
+import { useSelector } from 'react-redux';
 
 
 
 const App = () => {
+  const balance = useSelector(state=> state.amount)
   return (
     <>
 
-      <NoteState>
-          <Navbar />
-            
-         <Home/>
-         <About/>
-      </NoteState>
+      <Navbar />
+      <div className='d-flex justify-content-center my-4'>
+        <div className="btn btn-outline-primary">Balance {balance}</div>
+      </div>
+      <div className="container my-4">
+        <Shop />
+      </div>
+
 
     </>
 
