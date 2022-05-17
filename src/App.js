@@ -1,25 +1,24 @@
 import './App.css';
 import React from 'react'
-import Navbar from './Navbar';
-import Shop from './Shop';
-import { useSelector } from 'react-redux';
-
+import { useSelector,useDispatch } from 'react-redux';
+import { incNum, decNum } from './actions/index'
 
 
 const App = () => {
-  const balance = useSelector(state=> state.amount)
+  const myState = useSelector((e)=> e.changeNumber)
+  const dispatch = useDispatch()
   return (
     <>
+      <div className="container">
+        <h1>increment/decrement counter</h1>
+        <h4>using react and redux</h4>
 
-      <Navbar />
-      <div className='d-flex justify-content-center my-4'>
-        <div className="btn btn-outline-primary">Balance {balance}</div>
+        <div className="container my-4">
+          <button className="btn btn-info mx-3" title='Decrement' onClick={()=>{dispatch(decNum(5))}}>-</button>
+          <input name='quantity' type="text"  value={myState}/>
+          <button className="btn btn-info mx-3" title='Increment' onClick={()=>{dispatch(incNum(5))}} >+</button>
+        </div>
       </div>
-      <div className="container my-4">
-        <Shop />
-      </div>
-
-
     </>
 
   )
